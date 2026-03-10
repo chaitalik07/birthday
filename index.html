@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<audio autoplay loop muted id="bgMusic">
+<source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+
+<body class="home-bg home-page">
+
+<!-- Background Music -->
+
+<!-- Intro -->
+<div class="intro">
+<h1>Happy Birthday ❤️</h1>
+<p>Here's small token of love for my Bubba-Wubba 🎁</p>
+</div>
+
+<!-- Gift Link -->
+<div class="center">
+<a href="newspaper.html" class="gift">
+<div class="gift-icon">Today's News 📰</div>
+</a>
+</div>
+
+<!-- Hearts Animation -->
+<script>
+setInterval(function(){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.style.position="fixed";
+heart.style.top="-20px";
+heart.style.left=Math.random()*100+"%";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+heart.style.pointerEvents="none";
+heart.style.animation="fall 6s linear";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},500);
+</script>
+
+<!-- Music Autoplay Trick -->
+<script>
+let music=document.getElementById("bgMusic");
+
+window.addEventListener("load",()=>{
+music.muted=false;
+music.play();
+});
+</script>
+
+</body>
+</html>
